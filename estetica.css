@@ -1,0 +1,430 @@
+/* ======= RESET E BASE ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ======= LOGO ======= */
+.topo {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+}
+
+.logo-topo {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: flutuar 4s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ======= MENU ======= */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(90deg, #0099ff, #0066ff);
+  padding: 15px;
+  border-radius: 40px;
+  width: 95%;
+  margin: 20px auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  
+
+  
+  
+}.menu {
+  width: 100%; /* ocupa toda a largura */
+  overflow: visible; /* evita cortar o texto */
+  white-space: normal; /* permite quebrar linha, se necessário */
+  text-align: left; /* ou center, se quiser */
+  padding: 10px 20px; /* dá um respiro nas laterais */
+}
+
+
+.menu a {
+
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  white-space: normal;
+
+}
+
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* ======= MENU HAMBÚRGUER (para celular e tablet) ======= */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  top: 12px;
+}
+
+
+@media (max-width: 850px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  /* Espaçamento entre os botões do menu no mobile */
+.menu a {
+  display: block;
+  padding: 14px 0;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+/* cria espaço entre os botões */
+.menu a + a {
+  margin-top: 10px;
+}
+
+/* evita que o primeiro botão encoste no topo */
+.menu a:first-child {
+  margin-top: 20px;
+}
+
+/* botão hambúrguer posicionado corretamente */
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+  .menu.active a {
+    display: block;
+    animation: fadeIn 0.4s ease forwards;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Espaço entre o botão e o primeiro link do menu */
+  .menu a:first-child {
+    margin-top: 40px; /* aumenta ou diminui esse valor conforme o espaço desejado */
+  }
+  .menu {
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.menu.active {
+  max-height: 400px; /* altura suficiente para caber os links */
+}
+
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= SEÇÃO: CONHECER ======= */
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10%;
+  gap: 30px;
+}
+
+.sobre .texto {
+  flex: 1;
+  min-width: 300px;
+  animation: aparecer 1.5s ease;
+}
+
+/* Animação suave */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sobre h1 {
+  color: #0056e0;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.sobre p {
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sobre .fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.sobre .fotos img {
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.sobre .fotos img:hover {
+  transform: scale(1.05);
+}
+
+/* ======= ESPORTE ======= */
+.esporte {
+  background: #f4f9ff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 10%;
+}
+
+.fotos2 img {
+  width: 320px;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: pulsar 3s infinite ease-in-out;
+}
+
+@keyframes pulsar {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.texto-esporte h2 {
+  color: #0056e0;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.texto-esporte p {
+  max-width: 450px;
+}
+
+/* ======= ENSINO ======= */
+.ensino {
+  text-align: center;
+  padding: 80px 5%;
+  background: linear-gradient(180deg, #e8f2ff, #ffffff);
+}
+
+.ensino h2 {
+  font-size: 32px;
+  color: #0056e0;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 30px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+  font-size: 40px;
+  color: #0056e0;
+  margin-bottom: 10px;
+}
+
+/* ======= PROJETOS ======= */
+.projeto {
+  text-align: center;
+  padding: 70px 8%;
+}
+
+.projeto h2 {
+  font-size: 30px;
+  color: #0056e0;
+  margin-bottom: 15px;
+}
+
+.projeto p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.fotos5 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fotos5 img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.fotos5 img:hover {
+  transform: scale(1.05);
+}
+
+/* ======= MATRÍCULA ======= */
+.matricula {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  padding: 80px 8%;
+  text-align: center;
+  border-radius: 40px 40px 0 0;
+}
+
+.matricula-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.matricula img {
+  width: 280px;
+  border-radius: 20px;
+}
+
+.texto-matricula h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.texto-matricula p {
+  max-width: 450px;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.destaque {
+  font-weight: bold;
+  color: #fff700;
+}
+
+.botoes-matricula a {
+  text-decoration: none;
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: white;
+  animation: pulsar 2.5s infinite;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5b;
+}
+
+.btn-instagram {
+  background: #e1306c;
+  color: white;
+}
+
+.btn-instagram:hover {
+  background: #c72a61;
+}
+
+/* ======= RODAPÉ ======= */
+.footer {
+  background: #002b80;
+  color: white;
+  padding: 60px 5%;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.footer-logo img {
+  width: 100px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
