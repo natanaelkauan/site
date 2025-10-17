@@ -7,26 +7,11 @@
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: #ffffff;
   color: #222;
   line-height: 1.6;
   overflow-x: hidden;
-}
-
-/* ======= LINKS GERAIS ======= */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:focus, button:focus {
-  outline: 2px solid #0056e0;
-  outline-offset: 3px;
 }
 
 /* ======= LOGO ======= */
@@ -177,6 +162,59 @@ a:focus, button:focus {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ======= SEÇÃO: CONHECER ======= */
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10%;
+  gap: 30px;
+}
+
+.sobre .texto {
+  flex: 1;
+  min-width: 300px;
+  animation: aparecer 1.5s ease;
+}
+
+/* Animação suave */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sobre h1 {
+  color: #0056e0;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.sobre p {
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sobre .fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.sobre .fotos img {
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.sobre .fotos img:hover {
+  transform: scale(1.05);
+}
+
 /* ======= ESPORTE ======= */
 .esporte {
   background: #f4f9ff;
@@ -386,30 +424,6 @@ a:focus, button:focus {
   margin-right: 10px;
   transition: transform 0.3s;
 }
-
-.social-icon:hover {
-  transform: scale(1.2);
-}
-
-/* ======= RESPONSIVIDADE ======= */
-@media (max-width: 600px) {
-  .sobre h1,
-  .ensino h2,
-  .projeto h2,
-  .texto-matricula h2 {
-    font-size: 26px;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .fotos2 img {
-    width: 250px;
-  }
-}
-
-
 
 .social-icon:hover {
   transform: scale(1.2);
